@@ -1,0 +1,333 @@
+* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	/*ON FONE*/
+
+	body {
+		
+		
+		background-color: rgba(0,0,0, 0.8);
+	
+		background-image: url(tic.jpg);
+
+		
+	}
+
+	h3 {
+		color: novajowhite;
+		font-size: 30pt;
+		text-align: center;
+		padding-top: 5px;
+		font-family: sans-serif;
+	}
+
+	.player {
+		background-color: rgba(0,0,0, 1);
+		display: flex;
+		flex-direction: column;
+	}
+
+	p {
+		color: blue;
+		padding-top: 10px;
+		font-size: 15pt;
+		text-align: center;
+		padding-bottom: 10px;
+	}
+
+	.player input {
+		border: 1px solid grey;
+		background-color: transparent;
+		border-radius: 20px;
+		width: 70%;
+		margin: 5px auto;
+		color: novajowhite;
+		font-size: 15pt;
+		outline: none;
+		text-align: center;
+	}
+
+	.player button {
+		width: 70px;
+		height: 40px;
+		border-radius: 5px;
+		border: 0px;
+		margin: 5px auto;
+		background-color: green;
+		color: white;
+		outline: none;
+	}
+
+	.nameplayer {
+		color: novajowhite;
+		text-align: center;
+		font-size: 15pt;
+		padding-left: 30px;
+		font-family: monospace;
+	}
+
+	::placeholder {
+		color: white;
+		text-align: center;
+	}
+
+	.all {
+		margin-top: 10px;
+	}
+
+	.row {
+		display: flex;
+		flex-direction: row;
+		width: 240px;
+		margin: 0 auto;
+	}
+
+	.row div {
+		background-color: rgba(0,0,0, 0.7);
+		width: 80px;
+		height: 80px;
+		border-right: 3px inset silver;
+		border-bottom: 3px inset silver;
+		color: green;
+		font-size: 40pt;
+		padding: 10px;
+		text-align: center;
+		border-radius: 0px;
+	}
+
+	.scoreboard {
+		width: 90%;
+		margin: 10px auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.firstplayer {
+		height: 50px;
+		width: 30%;
+		color: white;
+		font-size: 20pt;
+		text-align: center;
+		padding: 15px;
+	}
+
+	.score {
+		background-color: rgba(0,0,0, 0.6);
+		height: 50px;
+		width: 50%;
+		border-radius: 50px;
+		border-top-right-radius: 10px;
+		border-top-left-radius: 10px;
+		border-top: 2px solid silver;
+		box-shadow: 2px 6px 5px 0 blue;	
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	.score div {
+		text-align: center;
+		font-size: 30pt;
+		color: white;
+	}
+
+	.secondplayer {
+		height: 50px;
+		width: 30%;
+		color: white;
+		font-size: 20pt;
+		text-align: center;
+		padding: 15px;
+	}
+
+
+
+	.replay {
+			margin: 2px auto;
+			width: 100px;
+			height: 40px;
+		}
+
+		.replaybutton {
+			width: 100px;
+			background-color: green;
+			height: 40px;
+			border: none;
+			border-radius: 50px;
+			color: white;
+
+		}
+
+
+
+
+	@media only screen and (min-width: 1024px) {
+
+			body {
+			background-image: url(tic.jpg);
+			
+			
+			
+			background-color: black;
+			font-family: sans-serif;
+
+		}
+		h4 {
+			color: white;
+			font-size: 35pt;
+			text-align: center;
+			font-family: sans-serif;
+		}
+
+		.player {
+			background-color: rgba(0,0,0, 0.5);
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			width: 1000px;
+			margin: 0px auto;
+		}
+
+		p {
+			color: violet;
+			padding-left: 10px;
+			padding-top: 10px;
+			font-size: 15pt;
+			padding-bottom: 10px;
+		}
+
+		.player input {
+			border: 1px solid blue;
+			background-color: transparent;
+			border-radius: 20px;
+			height: 40px;
+			width: 25%;
+			margin-left: 10px;
+			color: navajowhite;
+			font-size: 10pt;
+			outline: none;
+			text-align: center;
+			margin: auto;
+		}
+
+		.player button {
+			width: 100px;
+			border-radius: 20px;
+			border: 0px;
+			background-color: violet;
+			color: navajowhite;
+			outline: none;
+			margin: auto;
+		}
+
+		.nameplayer {
+			color: navajowhite;
+			text-align: center;
+			font-size: 20pt;
+			font-family: sans-serif;
+		}
+
+		::placeholder {
+			color: navajowhite;
+			text-align: center;
+		}
+
+
+		.all {
+			margin-top: 0px;
+		}
+
+		.row {
+			display: flex;
+			flex-direction: row;
+			margin: 0 auto;
+			width: 430px;
+		}
+
+		.row div {
+			background-color: transparent;
+			width: 140px;
+			height: 120px;
+			border-right: 3px inset silver;
+			border-bottom: 3px inset silver;
+			border-left: 3px inset silver;
+			border-top: 3px inset silver;
+			color: indigo;
+			font-size: 60pt;
+			padding: 10px;
+			text-align: center;
+			border-radius: 0px;
+		}
+
+		.scoreboard {
+			width: 550px;
+			margin: 3px auto;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		.firstplayer {
+			height: 50px;
+			width: 30%;
+			color: white;
+			font-size: 20pt;
+			text-align: center;
+			padding: 15px;
+		}
+
+
+		.score {
+			background-color: rgba(0,0,0, 0.6);
+			height: 50px;
+			width: 40%;
+			border-radius: 30px;
+			border-top-right-radius: 0px;
+			border-top-left-radius: 0px;
+			border-bottom-left-radius: 0px;
+			border-bottom-right-radius: 0px;
+			border-top: 2px solid navajowhite;
+			
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;	
+		}
+
+		.score div {
+			text-align: center;
+			font-size: 25pt;
+			color: white;
+		}
+
+		.secondplayer {
+			height: 50px;
+			width: 30%;
+			color: navajowhite;
+			font-size: 20pt;
+			text-align: center;
+			padding: 15px;
+		}
+
+		.replay {
+			margin: 2px auto;
+			width: 100px;
+			height: 40px;
+
+		}
+
+		.replaybutton {
+			width: 90px;
+			background-color: violet;
+			height: 40px;
+			border: none;
+			border-radius: 30px;
+			color: white;
+
+		}
+
+	}
+

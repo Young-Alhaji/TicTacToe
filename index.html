@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="tic.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<style type="text/css">
+		body{
+			background-image: url(tic.png);
+			background-repeat: no-repeat;
+			background-size: 100% 120%;
+		
+
+		}
+	</style>
+	<body >
+
+			
+			<div class="player">
+				<p>Names:</p> 
+				<input type="text" name="" placeholder="Player1" id="player1"> <br>
+				<input type="text" name="" placeholder="Player2" id="player2"> <br>
+
+				<button id="btn" onclick="onStart()">Start</button> <br>
+			</div>
+			<div class="nameplayer" id="nameplayer"></div>
+			<div class="nameplayer" id="result">Ready Players!!!</div>
+		<div class="all">
+			<div>
+				<div class="row">
+					<div onclick="playHere(event)" id="one"></div>
+					<div onclick="playHere(event)" id="two"></div>
+					<div onclick="playHere(event)" id="three"></div>
+				</div>
+
+				<div class="row">
+					<div onclick="playHere(event)" id="four"></div>
+					<div onclick="playHere(event)" id="five"></div>
+					<div onclick="playHere(event)" id="six"></div>
+				</div>
+
+				<div class="row">
+					<div onclick="playHere(event)" id="seven"></div>
+					<div onclick="playHere(event)" id="eight"></div>
+					<div onclick="playHere(event)" id="nine"></div>
+				</div>
+			</div>								
+		</div><!-- 
+		<div style="background-color: red;"id="result">kkkskskk</div> -->
+
+		<div class="scoreboard">
+			<div id="firstplayer"class=firstplayer></div>
+			<div class="score">
+				<div id="scoreone">0</div>
+				<div>-</div>
+				<div id="scoretwo">0</div>
+			</div>
+			<div id="secondplayer" class="secondplayer"></div>
+		</div> <br>
+
+		<div class="replay">
+			<button class="replaybutton" onclick="rePlay()">Replay</button>	
+		</div>
+
+
+		<script type="text/javascript">
+			
+			var box = " ";
+			var check = false;
+			// FUNCTION FOR START AND END BUTTON
+			function onStart() {
+				if (player1.value != "" && player2.value != "" && btn.innerHTML == "Start") {
+					btn.innerHTML = "End"
+					check = true;
+					firstplayer.innerHTML = player1.value;
+					secondplayer.innerHTML = player2.value;
+					nameplayer.innerHTML = "Start the game " + player1.value + "(X)";
+					result.innerHTML = " GOODLUCK!!!"
+						one.innerHTML = "";
+						two.innerHTML = "";
+						three.innerHTML = "";
+						four.innerHTML = "";
+						five.innerHTML = "";
+						six.innerHTML = "";
+						seven.innerHTML = "";
+						eight.innerHTML = "";
+						nine.innerHTML = "";
+					} else if (player1.value != "" && player2.value != "" && btn.innerHTML == "End") {
+						check = false;
+						box = " "
+						player1.value = "";
+						player2.value = "";
+						firstplayer.innerHTML = "";
+						secondplayer.innerHTML = "";
+						nameplayer.innerHTML = "End of Game!";
+						result.innerHTML = "";
+						scoreone.innerHTML = "0";
+						scoretwo.innerHTML = "0";
+						btn.innerHTML = "Start!";
+						one.innerHTML = "";
+						two.innerHTML = "";
+						three.innerHTML = "";
+						four.innerHTML = "";
+						five.innerHTML = "";
+						six.innerHTML = "";
+						seven.innerHTML = "";
+						eight.innerHTML = "";
+						nine.innerHTML = "";
+					} else {
+						nameplayer.innerHTML = "Please input your names."; 
+						result.innerHTML = "";
+					}	
+			}
+			
+			function rePlay() {
+						one.innerHTML = "";
+						two.innerHTML = "";
+						three.innerHTML = "";
+						four.innerHTML = "";
+						five.innerHTML = "";
+						six.innerHTML = "";
+						seven.innerHTML = "";
+						eight.innerHTML = "";
+						nine.innerHTML = "";
+						nameplayer.innerHTML = "GO ON PLAYERS!!!"
+
+						result.innerHTML = "Another chance";
+			}
+			
+			function playHere(event) {
+
+
+				if ((nameplayer.innerHTML == player1.value + " Won. Click on replay or End.") || (nameplayer.innerHTML == player2.value + " Won. Click on replay or End.")) {
+					nameplayer.innerHTML = "We have a winner already. Click on replay or End."
+				}
+
+
+				if (event.target.innerHTML != "") {
+					return;
+				}
+				
+
+				if (nameplayer.innerHTML == "We have a winner already. Click on replay or End.") {
+					return;
+				} else if (check == true && box == " ") {
+					event.target.innerHTML = "X";
+					box = 1;
+					nameplayer.innerHTML = player2.value + " (O)"+ " your turn ";
+				} else if (check == true && box == 1) {
+					event.target.innerHTML = "O";
+					box = " ";
+					nameplayer.innerHTML = player1.value + " (X)"+ " your turn ";
+				} else {
+					nameplayer.innerHTML = "Click on Start to start the game.";
+					result.innerHTML = "";
+				} 
+
+
+				if ((one.innerHTML  != "") &&
+							(two.innerHTML  != "") &&
+							(three.innerHTML != "") &&
+							(four.innerHTML != "") &&
+							(five.innerHTML != "") &&
+							(six.innerHTML  != "") &&
+							(seven.innerHTML != "") &&
+							(eight.innerHTML != "") &&
+							(nine.innerHTML != "")) {
+						nameplayer.innerHTML = "Oopss!!! Draw game.  Replay or end the game";
+						result.innerHTML = "NO WINNER"
+					}
+
+				// IF STATEMENT FOR WINNER (PLAYER) WITH LETTER X
+				if (
+					(one.innerHTML == "X" && two.innerHTML == "X" && three.innerHTML == "X") ||
+					(four.innerHTML == "X" && five.innerHTML == "X" && six.innerHTML == "X") ||
+					(seven.innerHTML == "X" && eight.innerHTML == "X" && nine.innerHTML == "X") ||
+					(one.innerHTML == "X" && four.innerHTML == "X" && seven.innerHTML == "X") ||
+					(two.innerHTML == "X" && five.innerHTML == "X" && eight.innerHTML == "X") ||
+					(three.innerHTML == "X" && six.innerHTML == "X" && nine.innerHTML == "X") ||
+					(one.innerHTML == "X" && five.innerHTML == "X" && nine.innerHTML == "X") ||
+					(three.innerHTML == "X" && five.innerHTML == "X" && seven.innerHTML == "X") 
+					){
+						nameplayer.innerHTML = player1.value + " Won. Click on replay or End."
+						result.innerHTML = player2.value + " to start next Round";
+						++scoreone.innerHTML;
+					}
+
+
+				
+				 if (
+					(one.innerHTML == "O" && two.innerHTML == "O" && three.innerHTML == "O") ||
+					(four.innerHTML == "O" && five.innerHTML == "O" && six.innerHTML == "O") ||
+					(seven.innerHTML == "O" && eight.innerHTML == "O" && nine.innerHTML == "O") ||
+					(one.innerHTML == "O" && four.innerHTML == "O" && seven.innerHTML == "O") ||
+					(two.innerHTML == "O" && five.innerHTML == "O" && eight.innerHTML == "O") ||
+					(three.innerHTML == "O" && six.innerHTML == "O" && nine.innerHTML == "O") ||
+					(one.innerHTML == "O" && five.innerHTML == "O" && nine.innerHTML == "O") ||
+					(three.innerHTML == "O" && five.innerHTML == "O" && seven.innerHTML == "O")
+					){
+						nameplayer.innerHTML = player2.value + " Won. Click on replay or End.";
+						result.innerHTML = player1.value + " to start next Round";
+						++scoretwo.innerHTML;
+					}
+					}
+			
+		</script>
+
+	</body>
+</html>
