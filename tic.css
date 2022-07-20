@@ -5,19 +5,18 @@
 	}
 
 	/*ON FONE*/
+body{
+			background-image: url(tic.png);
+			background-repeat: no-repeat;
+			background-size: 170% 110%;
 
-	body {
+			font-family: sans-serif;
 		
-		
-		background-color: rgba(0,0,0, 0.8);
-	
-		background-image: url(tic.jpg);
 
-		
-	}
+		}
 
 	h3 {
-		color: novajowhite;
+		color: navajowhite;
 		font-size: 30pt;
 		text-align: center;
 		padding-top: 5px;
@@ -25,13 +24,13 @@
 	}
 
 	.player {
-		background-color: rgba(0,0,0, 1);
+		background-color: transparent;
 		display: flex;
 		flex-direction: column;
 	}
 
 	p {
-		color: blue;
+		color: violet;
 		padding-top: 10px;
 		font-size: 15pt;
 		text-align: center;
@@ -44,7 +43,7 @@
 		border-radius: 20px;
 		width: 70%;
 		margin: 5px auto;
-		color: novajowhite;
+		color: navajowhite;
 		font-size: 15pt;
 		outline: none;
 		text-align: center;
@@ -56,13 +55,13 @@
 		border-radius: 5px;
 		border: 0px;
 		margin: 5px auto;
-		background-color: green;
+		background-color: violet;
 		color: white;
 		outline: none;
 	}
 
 	.nameplayer {
-		color: novajowhite;
+		color: navajowhite;
 		text-align: center;
 		font-size: 15pt;
 		padding-left: 30px;
@@ -89,13 +88,17 @@
 		background-color: rgba(0,0,0, 0.7);
 		width: 80px;
 		height: 80px;
+		border-left: 3px inset silver;
+		border-top: 3px inset silver;
 		border-right: 3px inset silver;
 		border-bottom: 3px inset silver;
-		color: green;
+		background-color: transparent;
+		border-radius: 10px;
+		color: violet;
 		font-size: 40pt;
 		padding: 10px;
 		text-align: center;
-		border-radius: 0px;
+	
 	}
 
 	.scoreboard {
@@ -123,7 +126,7 @@
 		border-top-right-radius: 10px;
 		border-top-left-radius: 10px;
 		border-top: 2px solid silver;
-		box-shadow: 2px 6px 5px 0 blue;	
+		box-shadow: 2px 6px 5px 0 violet;	
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
@@ -154,7 +157,7 @@
 
 		.replaybutton {
 			width: 100px;
-			background-color: green;
+			background-color: violet;
 			height: 40px;
 			border: none;
 			border-radius: 50px;
@@ -167,15 +170,15 @@
 
 	@media only screen and (min-width: 1024px) {
 
-			body {
-			background-image: url(tic.jpg);
-			
-			
-			
+			body{
+			background-image: url(tic.png);
+			background-repeat: no-repeat;
+			background-size: 100% 120%;
 			background-color: black;
 			font-family: sans-serif;
 
 		}
+
 		h4 {
 			color: white;
 			font-size: 35pt;
@@ -256,11 +259,11 @@
 			border-bottom: 3px inset silver;
 			border-left: 3px inset silver;
 			border-top: 3px inset silver;
-			color: indigo;
+			color: violet;
 			font-size: 60pt;
 			padding: 10px;
 			text-align: center;
-			border-radius: 0px;
+			border-radius: 10px;
 		}
 
 		.scoreboard {
